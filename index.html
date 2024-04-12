@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frotend Mentor | Time tracking dashboard</title> 
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/main.js" type="module" defer></script>
+    <style>
+        #dash.active{ color: #fff;}
+    </style>
+</head>
+<body class="grid justify-center my-16 lg:items-center lg:min-h-screen lg:my-0 bg-[#0f1424] text-white">
+    
+    <main id="dash" class="grid gap-6 lg:grid-cols-4 lg:max-w-[1100px] lg:gap-7">
+        <div id="profile-container" class="bg-[#1c1f4a] rounded-2xl grid row-start-1 row-end-3" >
+            <div id="profile-user" class="bg-[#5847eb] p-8  flex flex-col items-start rounded-2xl " style="grid-template-columns: 85px 1fr;">
+                <img src="images/image-jeremy.png" alt="Jeremy Robson" class="" style="border: 3px solid #fff;border-radius: 50%;">
+
+                
+                <span id="dash-span" class="self-start pt-5 lg:pt-9 text-[#bdc1ff]" style="font-size: .9rem;">Report for</span>
+                <h1 id="dash-name" class="self-start lg:pb-9 font-light" style="font-size: 1.5rem;">Jeremy Robson</h1>
+            </div>
+
+            <div id="dash-frequency" class="flex justify-around p-5 lg:flex-col lg:gap-4 lg:p-7">
+                <p id="timeframe daily" class="font-normal text-[#6d76c8] cursor-pointer" style="font-size: 1.1rem; transition: color .1s ease-in-out;">Daily</p>
+                <p id="timeframe weekly" class="font-normal text-[#6d76c8] cursor-pointer" style="font-size: 1.1rem; transition: color .1s ease-in-out;">Weekly</p>
+                <p id="timeframe monthly" class="font-normal text-[#6d76c8] cursor-pointer" style="font-size: 1.1rem; transition: color .1s ease-in-out;">Monthly</p>
+            </div>
+
+        </div>
+
+        <div id="analysis-container" class="relative h-[160px] grid lg:h-full">
+
+            <div id="bg-work" class="rounded-2xl absolute h-full w-full flex justify-end"></div>
+
+            <div id="dash-analysis" class="grid grid-cols-2 items-center p-6 rounded-2xl self-end bg-[#1c1f4a]">
+                <h2 class="category font-medium" style="font-size: 1.1rem;">Work</h2>
+                <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+
+                <div id="data">
+                    <h3 id="hours" class="font-extralight" style="font-size: 3rem;">32hrs</h3>
+                    <p id="last" class="text-[#bdc1ff] font-normal" style="font-size: .7rem;">Last week - 36hrs</p>
+                </div>
+               
+            </div>
+            
+
+        </div> <!-- end analysis work -->
+
+        <div id="analysis-container" class="relative h-[160px] grid lg:h-full">
+
+            <div id="bg-play" class="rounded-2xl absolute h-full w-full flex justify-end"></div>
+
+            <div id="dash-analysis" class="grid grid-cols-2 items-center p-6 rounded-2xl self-end bg-[#1c1f4a]">
+                <h2 lass="category font-medium" style="font-size: 1.1rem;">Play</h2>
+                <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+                <div id="data">
+                    <h3 id="hours" class="font-extralight" style="font-size: 3rem;">32hrs</h3>
+                    <p id="last" class="text-[#bdc1ff] font-normal" style="font-size: .7rem;">Last week - 36hrs</p>
+                </div>
+            </div>
+            
+
+        </div> <!-- end analysis play -->
+
+
+        <div id="analysis-container" class="relative h-[160px] grid lg:h-full">
+
+            <div id="bg-study" class="rounded-2xl absolute h-full w-full flex justify-end"></div>
+
+            <div id="dash-analysis" class="grid grid-cols-2 items-center p-6 rounded-2xl self-end bg-[#1c1f4a]">
+                <h2 class="category">Study</h2>
+                <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+                <div id="data">
+                    <h3 id="hours" class="font-extralight" style="font-size: 3rem;">32hrs</h3>
+                    <p id="last" class="text-[#bdc1ff] font-normal" style="font-size: .7rem;">Last week - 36hrs</p>
+                </div>
+            </div>
+            
+
+        </div> <!-- end analysis study -->
+
+
+        <div id="analysis-container" class="relative h-[160px] grid lg:h-full">
+
+            <div id="bg-exercise" class="rounded-2xl absolute h-full w-full flex justify-end"></div>
+
+            <div id="dash-analysis" class="grid grid-cols-2 items-center p-6 rounded-2xl self-end bg-[#1c1f4a]">
+                <h2 class="category" class="category font-medium" style="font-size: 1.1rem;">Exercise</h2>
+                <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+                <div id="data">
+                    <h3 id="hours" class="font-extralight" style="font-size: 3rem;">32hrs</h3>
+                    <p id="last" class="text-[#bdc1ff] font-normal" style="font-size: .7rem;">Last week - 36hrs</p>
+                </div>
+            </div>
+        </div> <!-- end analysis exercise -->
+
+
+        <div id="analysis-container" class="relative h-[160px] grid lg:h-full">
+
+            <div id="bg-social" class="rounded-2xl absolute h-full w-full flex justify-end"></div>
+
+            <div id="dash-analysis" class="grid grid-cols-2 items-center p-6 rounded-2xl self-end bg-[#1c1f4a]">
+                <h2 class="category" class="category font-medium" style="font-size: 1.1rem;">Social</h2>
+                <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+                <div id="data">
+                    <h3 id="hours" class="font-extralight" style="font-size: 3rem;">32hrs</h3>
+                    <p id="last" class="text-[#bdc1ff] font-normal" style="font-size: .7rem;">Last week - 36hrs</p>
+                </div>
+            </div>
+        </div> <!-- end analysis social -->
+
+
+        <div id="analysis-container" class="relative h-[160px] grid lg:h-full">
+
+            <div id="bg-self-care" class="rounded-2xl absolute h-full w-full flex justify-end"></div>
+
+            <div id="dash-analysis" class="grid grid-cols-2 items-center p-6 rounded-2xl self-end bg-[#1c1f4a]">
+                <h2 class="category" class="category font-medium" style="font-size: 1.1rem;">Self Care</h2>
+                <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+                <div id="data">
+                    <h3 id="hours" class="font-extralight" style="font-size: 3rem;">32hrs</h3>
+                    <p id="last" class="text-[#bdc1ff] font-normal" style="font-size: .7rem;">Last week - 36hrs</p>
+                </div>
+            </div>
+        </div> <!-- end analysis self care  -->
+
+    </main>
+</body>
+</html>
